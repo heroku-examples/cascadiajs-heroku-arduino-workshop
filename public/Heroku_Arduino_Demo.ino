@@ -85,7 +85,10 @@ void displayButton(String buttonText, int button) {
   carrier.display.setTextColor(ST77XX_BLACK);
   carrier.display.setTextSize(3);
   carrier.display.setCursor(0, 0);
+  carrier.display.println("");
+  carrier.display.println("");
   carrier.display.println("Sent Message");
+  carrier.display.println("");
   carrier.display.println(buttonText);
   delay(5000);
   displayMainMenu();
@@ -93,16 +96,19 @@ void displayButton(String buttonText, int button) {
 
 void displayAck() {
   if (pendingMessage == 0) {
+    pendingMessage = -1;
     carrier.display.fillScreen(ST77XX_GREEN);
     carrier.display.setTextColor(ST77XX_BLACK);
     carrier.display.setTextSize(3);
     carrier.display.setCursor(0, 0);
-    carrier.display.println("Message Acknowledged");
-    carrier.Buzzer.sound(8000);
-    delay(500);
+    carrier.display.println("");
+    carrier.display.println("");
+    carrier.display.println("Message");
+    carrier.display.println("Acknowledged");
+    carrier.Buzzer.sound(4000);
+    delay(300);
     carrier.Buzzer.noSound();
-    delay(4500);
-    pendingMessage = -1;
+    delay(4700);
     displayMainMenu();
   }
 }
@@ -112,17 +118,20 @@ void displayMainMenu() {
   carrier.display.setTextColor(ST77XX_WHITE);
   carrier.display.setTextSize(3);
   carrier.display.setCursor(0, 0);
+  carrier.display.println("");
   carrier.display.print("Status: ");
   carrier.display.println(status);
-  carrier.display.print("00: ");
+  carrier.display.println("");
+  carrier.display.setTextSize(2);
+  carrier.display.print(" 00: ");
   carrier.display.println(button1);
-  carrier.display.print("01: ");
+  carrier.display.print(" 01: ");
   carrier.display.println(button2);
-  carrier.display.print("02: ");
+  carrier.display.print(" 02: ");
   carrier.display.println(button3);
-  carrier.display.print("03: ");
+  carrier.display.print(" 03: ");
   carrier.display.println(button4);
-  carrier.display.print("04: ");
+  carrier.display.print(" 04: ");
   carrier.display.println(button5);
 }
 
