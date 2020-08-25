@@ -1,10 +1,23 @@
 const micro = require("micro")
 const handler = require("serve-handler")
 
-const server = micro((req, res) =>
-  handler(req, res, {
-    public: "public",
-  })
-)
+const { PORT = 3000 } = process.env
 
-server.listen(process.env.PORT || 3000)
+const main = async () => {
+  const server = micro((req, res) =>
+    handler(req, res, {
+      public: "public",
+    })
+  )
+
+  server.listen(PORT)
+}
+
+main()
+  .then(() => {
+    console.log(`Server ready: http://localhost:${PORT}`)
+  })
+  .catch((e) => {
+    console.error("Server not started due to error")
+    console.error(e)
+  })

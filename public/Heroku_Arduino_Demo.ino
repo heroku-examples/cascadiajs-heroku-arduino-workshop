@@ -81,7 +81,7 @@ void loop() {
 
 void displayButton(String buttonText, int button) {
   pendingMessage = button;
-  carrier.display.fillScreen(ST77XX_RED);
+  carrier.display.fillScreen(ST77XX_GREEN);
   carrier.display.setTextColor(ST77XX_BLACK);
   carrier.display.setTextSize(3);
   carrier.display.setCursor(0, 0);
