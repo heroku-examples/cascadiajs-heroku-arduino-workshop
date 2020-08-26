@@ -2,15 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-ol li {
-  @apply mb-4;
+a {
+  @apply text-blue-600 underline;
+}
+
+ol {
+  @apply list-inside list-decimal;
+}
+
+ol > li {
+  @apply mb-4 pb-4;
+  @apply border-b-2 border-gray-600;
+}
+
+ol > li:last-child {
+  @apply border-0;
 }
 
 ol > li > img {
-  @apply mt-2;
-  @apply mb-2;
-  @apply w-full;
-  @apply border;
-  @apply border-gray-400;
-  @apply block;
+  @apply my-2;
+  @apply block w-full;
+  @apply border border-gray-400;
 }
