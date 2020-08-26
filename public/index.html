@@ -1,36 +1,83 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="CascadiaJS Heroku Arduino Demo" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <title>CascadiaJS Heroku Arduino Demo</title>
   </head>
   <body>
-    <h2>Steps</h2>
-    <ol>
-      <li>Follow the instructions on the box to register the kit</li>
-      <li>
-        <a
-          href="https://github.com/arduino/iot-client-js#how-to-get-arduino-iot-cloud-client-credentials"
-        >
-          Create client credentials
-        </a>
-      </li>
-      <li>
-        Create a new thing with the following properties for your board<br />
-        <img src="/properties.png" style="max-width: 600px" />
-      </li>
-      <li>Click "Edit Sketch"</li>
-      <li>
-        Copy and paste the contents of
-        <a href="/Heroku_Arduino_Demo.ino" download>this .ino file</a> and into
-        <a href="https://create.arduino.cc">your sketch</a>
-      </li>
-      <li>Update the wifi credentials in the sketch</li>
-      <li>Upload and save the sketch to your board</li>
-    </ol>
-    <h2>Deploy your heroku app</h2>
-    <a
-      href="https://heroku.com/deploy?template=https://github.com/andyet/cascadiajs-heroku-arduino-demo-client"
-    >
-      <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy" />
-    </a>
+    <div class="max-w-screen-md mx-auto pt-4 px-4">
+      <img src="logo.svg" class="w-24 mx-auto mb-2" />
+      <h1 class="mb-16 text-center text-lg">
+        Create an 'On air' indicator for your home office using
+        <strong>Arduino + Heroku</strong>
+      </h1>
+
+      <ol class="list-decimal pl-8">
+        <li>
+          Follow the instructions on the box to create your Arduino account,
+          register the kit, and connect it to your computer
+        </li>
+        <li>
+          Go to
+          <a href="https://create.arduino.cc/iot/things" target="_blank"
+            >Your Things</a
+          >
+          in your Arduino IoT account and click "Add New Thing"
+          <img src="./images/add-new-thing.png" />
+        </li>
+        <li>
+          Enter a name for your new Thing and set it to be associated with your
+          new device "MKR WiFi 1010" <img src="./images/create-new-thing.png" />
+        </li>
+        <li>
+          Create the following properties for your new Thing
+          <img src="./images/properties.png" />
+          Make sure that all the "Character String" properties have the
+          following settings
+          <img src="./images/string-property.png" />
+          And that the "pendingMessage" property has the following settings
+          <img src="./images/int-property.png" />
+        </li>
+        <li>Click "Edit Sketch" <img src="./images/edit-sketch.png" /></li>
+        <li>
+          Enter the WiFi credentials in the "Secret" tab
+          <img src="./images/wifi-secret.png" />
+        </li>
+        <li>
+          Copy and paste the contents of
+          <a
+            href="/Heroku_Arduino_Demo.ino"
+            download
+            class="text-blue-600 underline"
+            >this .ino file</a
+          >
+          into the main .ino file of your sketch and click "Upload and Save"
+          <img src="./images/upload-and-save.png" />
+        </li>
+        <li>
+          <a href="https://create.arduino.cc/iot/things" target="_blank">
+            Create a new API and download the resulting Client ID and Secret
+            <img src="./images/create-api.png" />
+          </a>
+        </li>
+        <li>
+          Click the button below to deploy your Heroku app. Use the Client ID
+          and Secret that you downloaded in the previous step.
+          <a
+            href="https://heroku.com/deploy?template=https://github.com/andyet/cascadiajs-heroku-arduino-demo-client"
+            target="_blank"
+          >
+            <img
+              src="https://www.herokucdn.com/deploy/button.svg"
+              alt="Deploy"
+            />
+          </a>
+        </li>
+      </ol>
+    </div>
   </body>
 </html>

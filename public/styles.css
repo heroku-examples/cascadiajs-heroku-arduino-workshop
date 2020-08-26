@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ol li {
+  @apply mb-4;
+}
+
+ol > li > img {
+  @apply mt-2;
+  @apply mb-2;
+  @apply w-full;
+  @apply border;
+  @apply border-gray-400;
+  @apply block;
+}

@@ -86,7 +86,6 @@ void displayButton(String buttonText, int button) {
   carrier.display.setTextSize(3);
   carrier.display.setCursor(0, 0);
   carrier.display.println("");
-  carrier.display.println("");
   carrier.display.println("Sent Message");
   carrier.display.println("");
   carrier.display.println(buttonText);
@@ -101,7 +100,6 @@ void displayAck() {
     carrier.display.setTextColor(ST77XX_BLACK);
     carrier.display.setTextSize(3);
     carrier.display.setCursor(0, 0);
-    carrier.display.println("");
     carrier.display.println("");
     carrier.display.println("Message");
     carrier.display.println("Acknowledged");
@@ -119,19 +117,19 @@ void displayMainMenu() {
   carrier.display.setTextSize(3);
   carrier.display.setCursor(0, 0);
   carrier.display.println("");
-  carrier.display.print("Status: ");
+  carrier.display.println("Status:");
   carrier.display.println(status);
   carrier.display.println("");
   carrier.display.setTextSize(2);
-  carrier.display.print(" 00: ");
+  carrier.display.print("00: ");
   carrier.display.println(button1);
-  carrier.display.print(" 01: ");
+  carrier.display.print("01: ");
   carrier.display.println(button2);
-  carrier.display.print(" 02: ");
+  carrier.display.print("02: ");
   carrier.display.println(button3);
-  carrier.display.print(" 03: ");
+  carrier.display.print("03: ");
   carrier.display.println(button4);
-  carrier.display.print(" 04: ");
+  carrier.display.print("04: ");
   carrier.display.println(button5);
 }
 
