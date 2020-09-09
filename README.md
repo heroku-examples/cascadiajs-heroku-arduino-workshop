@@ -34,9 +34,9 @@ Make sure that all the "Character String" properties have the following settings
 
 ![](public/images/upload-and-save.png)
 
-8.  [Create a new API and download the resulting Client ID and Secret 
+8.  [Create a new API and download the resulting Client ID and Secret](https://create.arduino.cc/iot/things)  
 
-![](public/images/create-api.png)](https://create.arduino.cc/iot/things) 
+![](public/images/create-api.png)
 
 9.  Click the button below to deploy your Heroku app. Use the Client ID and Secret that you downloaded in the previous step.
     
